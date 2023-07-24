@@ -1,2 +1,37 @@
-https://github.com/blaze005/blaze005.github.io/blob/main/ads/TAI.gif?raw=true
-https://github.com/blaze005/blaze005.github.io/blob/main/ads/VAReal.jpg?raw=true
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OrbisTwitter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Orbis Twitter</h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="tweet-form-container">
+                <h2>Compose your tweet</h2>
+                <form id="tweetForm">
+                    <textarea id="tweetInput" placeholder="Compose your tweet..." rows="4" maxlength="75"></textarea>
+                    <input type="text" id="usernameInput" placeholder="Your Username">
+                    <input type="text" id="avatarInput" placeholder="Your Discord Avatar Link">
+                    <span class="char-counter" id="charCounter">75 characters remaining</span>
+                    <button type="button" id="submitTweetButton">Tweet</button>
+                </form>
+            </div>
+
+            <!-- Scrollable tweet feed container -->
+            <div class="tweet-feed-container" id="tweetSection">
+                <!-- Existing tweets and new tweets will be added dynamically here -->
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+    </main>
+</body>
+</html>

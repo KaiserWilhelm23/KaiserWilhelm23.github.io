@@ -1,0 +1,197 @@
+/* Global CSS styles */
+
+/* CSS for the tweet submission form */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+header {
+    background-color: #1da1f2;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tweet-form-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.tweet-feed-container {
+    flex: 2;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #1da1f2;
+}
+
+.tweet {
+    display: flex;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tweet img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tweet-content {
+    flex: 1;
+}
+
+.tweet-username {
+    font-weight: bold;
+    color: #1da1f2;
+}
+
+.tweet-text {
+    word-wrap: break-word;
+}
+.tweet-form-container {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    float: left;
+}
+
+#tweetForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#tweetForm textarea,
+#tweetForm input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submitTweetButton {
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitTweetButton:hover {
+    background-color: #0d8aed;
+}
+
+/* CSS for the tweet feed container */
+.tweet-feed-container {
+    max-width: 2000px; /* Set the initial width to 2000px */
+    width: 100%; /* Occupy the available width */
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    float: right;
+    height: 600px; /* Set the height for the scrollable container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+.tweet-list {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.tweet-text {
+    word-wrap: break-word; /* Enable text wrapping within the tweet content */
+    max-width: 100%; /* Limit the width of the tweet content */
+}
+
+.char-counter {
+    margin-top: 5px;
+    color: #777;
+    font-size: 12px;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+.tweet-form-container.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.tweet-feed-container.dark-mode {
+    background-color: #222;
+}
+
+.tweet.dark-mode {
+    background-color: #444;
+    border: 1px solid #777;
+}
+
+.tweet.dark-mode .tweet-username {
+    color: #1da1f2;
+}
+
+/* Tweet box text wrapping */
+.tweet-text {
+    word-wrap: break-word;
+}
+
+/* New tweets in dark mode */
+.tweet.dark-mode {
+    background-color: #444;
+    border: 1px solid #777;
+    color: #fff;
+}
+
+/* Toggle button styling */
+#themeToggle {
+    padding: 10px 15px;
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#themeToggle:hover {
+    background-color: #0d8aed;
+}
