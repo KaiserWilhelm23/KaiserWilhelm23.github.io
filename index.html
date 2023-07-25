@@ -3,7 +3,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <div class="dropdown">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbis Twitter</title>
+    <link rel="stylesheet" href="styles.css">
+     <link rel="icon" type="image/x-icon" href="https://images-ext-2.discordapp.net/external/gMVWDYZ4xPvjz-W9BuPw4WldI90K4L9qycodZSRN2MM/https/pbs.twimg.com/profile_images/1683352940466061313/ROqzFNVh_400x400.jpg?width=500&height=500">
+     <style>
+        /* Your existing CSS styles here ... */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 8px;
+            background-color: #1da1f2;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="dropdown">
             <span>Menu &#9662;</span>
             <div class="dropdown-content">
                 <a href="http://www.orbistwitter.com">Home</a>
@@ -11,15 +61,6 @@
                 <a href="https://discord.gg/BzDDaE9fjd">Join</a>
             </div>
         </div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orbis Twitter</title>
-    <link rel="stylesheet" href="styles.css">
-     <link rel="icon" type="image/x-icon" href="https://images-ext-2.discordapp.net/external/gMVWDYZ4xPvjz-W9BuPw4WldI90K4L9qycodZSRN2MM/https/pbs.twimg.com/profile_images/1683352940466061313/ROqzFNVh_400x400.jpg?width=500&height=500">
-
-</head>
-<body>
-    <header>
         <h1>Orbis Twitter</h1>
         <h3> Please be aware your tweets can not be viewed by others, refreshing will reset all tweets. Working on a Back End Server </h3>
     </header>
