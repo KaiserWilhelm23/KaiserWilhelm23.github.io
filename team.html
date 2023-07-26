@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page</title>
+    <link rel="stylesheet" href="team_styles.css">
+    <style>
+        /* Your existing CSS styles here ... */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown span {
+            cursor: pointer;
+            padding: 8px;
+            background-color: #1da1f2;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <span>Menu &#9662;</span>
+            <div class="dropdown-content">
+                <a href="http://www.orbistwitter.com">Home</a>
+                <a href="http://www.orbistwitter.com/about.html">About</a>
+                <a href="http://www.orbistwitter.com/team.html">The Team</a>
+                <a href="https://discord.gg/BzDDaE9fjd">Join</a>
+            </div>
+        <div class="container">
+            <h1>Orbis Twitter Team</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <!-- Team member 1 -->
+            <div class="team-member">
+                <img src="https://cdn.discordapp.com/avatars/1025490468672385064/93acc641fb80b7ec0a62b46d2b9b5f20.webp?size=100" alt="Team Member 1">
+                <h2>SuperP (Meg)</h2>
+                <p>CEO & Owner</p>
+                <p>CEO and Owner of Orbis Twitter, </p>
+            </div>
+
+            <!-- Team member 2 -->
+            <div class="team-member">
+                <img src="https://cdn.discordapp.com/avatars/796008617768910879/168a1a7d3f8a0e4448587ac450d6fbe5.webp?size=100" alt="Team Member 2">
+                <h2>Kaiser Wilhelm (CoV)</h2>
+                <p>Founder & Co-CEO</p>
+                <p>Founder of Orbis Twitter </p>
+            </div>
+
+            <!-- Add more team members as needed -->
+        </div>
+    </main>
+</body>
+</html>
