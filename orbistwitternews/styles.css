@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #1da1f2;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-article {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.news-article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.news-article h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.published-date {
+    font-size: 14px;
+    color: #777;
+}
+
+.news-article p {
+    margin: 10px 0;
+}
+
+/* Additional CSS styling can be added to customize the appearance further */
