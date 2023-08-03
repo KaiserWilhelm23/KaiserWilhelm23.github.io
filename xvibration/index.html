@@ -12,10 +12,23 @@
     <p id="browser-support-status"></p>
     <p id="controller-status">Checking controller status...</p>
     <label for="vibration-intensity">Vibration Intensity (%): <span id="vibration-intensity-value">0%</span></label>
-
     <input type="range" id="vibration-intensity" min="0" max="100" value="0">
     <button id="stop-vibration-button" disabled>Stop Vibration</button>
   </div>
   <script src="script.js"></script>
+
+  <!-- "Show Known Issues" button -->
+  <button id="bugs-button" onclick="showKnownIssues()">Show Known Issues</button>
+
+  <!-- Bugs Section -->
+  <div id="bugs-popup" class="bugs-popup">
+    <div class="bugs-popup-content">
+      <span class="close-button" onclick="hideKnownIssues()">&times;</span>
+      <h3>Known Issues:</h3>
+      <ul>
+        <li>Will stop randomly but continue, I think this has to do with the APIs, not the code.</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

@@ -88,3 +88,13 @@ vibrationIntensityInput.addEventListener('input', () => {
   vibrationIntensityValue.textContent = `${percentage}%`;
   updateVibrationIntensity(); // Call the function to update the vibration intensity when the slider changes
 });
+
+function showKnownIssues() {
+    const popup = document.getElementById('bugs-popup');
+    popup.style.display = 'block';
+  }
+  
+  function hideKnownIssues() {
+    const popup = document.getElementById('bugs-popup');
+    popup.style.display = 'none';
+  }
