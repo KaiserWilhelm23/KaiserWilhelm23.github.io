@@ -51,7 +51,7 @@ function updateGamepadStatus() {
     document.getElementById('stop-vibration-button').disabled = false;
   } else {
     gamepad = null;
-    document.getElementById('controller-status').textContent = 'Controller disconnected. Press "A" on the controller to connect. Or check if it is even connected to your device... ';
+    document.getElementById('controller-status').textContent = 'Controller disconnected. 1. Check if controller is connected to your device   2. Press any button on the controller to omplete connection. ';
     document.getElementById('stop-vibration-button').disabled = true;
   }
 }
