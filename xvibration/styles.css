@@ -25,11 +25,48 @@ body {
     margin-bottom: 10px;
   }
   
+  /* Change the input field to a slider */
   input[type="number"] {
+    display: none; /* Hide the number input */
+  }
+  
+  input[type="range"] {
     width: 100%;
-    padding: 10px;
+    padding: 0;
     margin-bottom: 10px;
-    box-sizing: border-box;
+    height: 20px;
+    -webkit-appearance: none; /* Remove default styles for Webkit browsers */
+    background-color: #ff00c8;
+    border-radius: 10px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styles for Webkit browsers */
+    width: 30px;
+    height: 30px;
+    background-color: #0056b3;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* Adjust position to align with the track */
+    border: 2px solid #fff;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #0056b3;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #0056b3;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
   }
   
   button {
@@ -47,8 +84,16 @@ body {
     background-color: #0056b3;
   }
   
+  /* Add dark mode styles */
   .dark-mode {
     background-color: #1a1a1a;
     color: #fff;
+  }
+  
+  @media (max-width: 600px) {
+    /* Adjust slider width for mobile devices */
+    input[type="range"] {
+      width: 80%;
+    }
   }
   

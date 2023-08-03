@@ -19,21 +19,9 @@ function updateVibrationIntensity() {
     gamepad.vibrationActuator.playEffect("dual-rumble", {
       startDelay: 0,
       duration: 1000, // Vibrate for 1 second
-      gain: intensity,
+      weakMagnitude: intensity,
+      strongMagnitude: intensity,
     });
-  }
-}
-
-function startVibration() {
-  stopVibration();
-  if (gamepad && gamepad.vibrationActuator) {
-    vibrationInterval = setInterval(() => {
-      gamepad.vibrationActuator.playEffect("dual-rumble", {
-        startDelay: 0,
-        duration: 1000, // Vibrate for 1 second
-        gain: 1, // Full intensity
-      });
-    }, 1000); // Vibrate every 1 second
   }
 }
 
@@ -46,7 +34,8 @@ function stopVibration() {
     gamepad.vibrationActuator.playEffect("dual-rumble", {
       startDelay: 0,
       duration: 0, // Set to 0 to stop vibration
-      gain: 0,
+      weakMagnitude: 0,
+      strongMagnitude: 0,
     });
   }
 }
@@ -59,25 +48,43 @@ function updateGamepadStatus() {
   if (connectedGamepad) {
     gamepad = connectedGamepad;
     document.getElementById('controller-status').textContent = 'Controller connected';
-    document.getElementById('start-vibration-button').disabled = false;
     document.getElementById('stop-vibration-button').disabled = false;
   } else {
     gamepad = null;
     document.getElementById('controller-status').textContent = 'Controller disconnected. Press "A" on the controller to connect.';
-    document.getElementById('start-vibration-button').disabled = true;
     document.getElementById('stop-vibration-button').disabled = true;
   }
 }
+
+// Call the updateGamepadStatus() function on page load
+window.addEventListener('load', () => {
+  updateGamepadStatus();
+});
 
 // Event listener to update the gamepad variable when a controller is connected or disconnected
 window.addEventListener('gamepadconnected', updateGamepadStatus);
 window.addEventListener('gamepaddisconnected', updateGamepadStatus);
 
-// Add event listener to the button to start the vibration
-document.getElementById('start-vibration-button').addEventListener('click', startVibration);
-
 // Add event listener to stop the vibration
 document.getElementById('stop-vibration-button').addEventListener('click', stopVibration);
 
 // Add event listener to update the vibration intensity while the input value changes
-document.getElementById('vibration-intensity').addEventListener('input', updateVibrationIntensity);
+document.getElementById('vibration-intensity').addEventListener('input', () => {
+  updateVibrationIntensity();
+  
+  // Automatically start the vibration after the user inputs the intensity
+  if (!vibrationInterval) {
+    vibrationInterval = setInterval(() => {
+      updateVibrationIntensity();
+    }, 1000); // Vibrate every 1 second
+  }
+});
+
+const vibrationIntensityInput = document.getElementById('vibration-intensity');
+const vibrationIntensityValue = document.getElementById('vibration-intensity-value');
+
+vibrationIntensityInput.addEventListener('input', () => {
+  const percentage = vibrationIntensityInput.value;
+  vibrationIntensityValue.textContent = `${percentage}%`;
+  updateVibrationIntensity(); // Call the function to update the vibration intensity when the slider changes
+});
