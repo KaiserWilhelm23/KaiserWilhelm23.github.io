@@ -1,4 +1,39 @@
-<h1>Oops, this no longer exists... </h1>
-<p1>Obis Twitter is now shut down.</p1>
-<p2>This is posibly permanent </p2>
-<p3>Politics & War has banned the Commonwealth of Virginia for a false claim of "doxxing" </p3> 
+<div id="app" class="column">
+
+  <template v-if="gamepad">
+    <h4 class="title">
+      Vibration controller
+    </h4>
+    
+    <div class="field">
+      <label class="label">Intensity</label>
+      <div class="control">
+        <input
+          class="slider"
+          type="range"
+          min=0
+          max=100
+          v-model="magnitude">
+      </div>
+
+     <div class="field">
+      <label class="label">Control</label>
+      <div class="control">
+        <button
+          class="button is-primary"
+          type="button"
+          @click="toggleGo">
+          {{ button }}
+        </button>
+      </div>
+    </div>
+  </template>
+  <div v-else>
+    <h4 class="title">
+      No controller found
+    </h4>
+    <h5 class="title is-5">
+      You may need to press a button on your controller, if it's connected
+    </h5>
+  </div>
+</div>
