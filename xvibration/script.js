@@ -5,9 +5,9 @@ let vibrationInterval = null;
 // Check browser support for Gamepad API
 const browserSupportStatusElement = document.getElementById('browser-support-status');
 if ('getGamepads' in navigator) {
-  browserSupportStatusElement.textContent = 'Browser supports Gamepad API';
+  browserSupportStatusElement.textContent = 'Yay this browser is supported!!! ';
 } else {
-  browserSupportStatusElement.textContent = 'Browser does not support Gamepad API';
+  browserSupportStatusElement.textContent = 'Does not look like your browser is supported :`(';
 }
 
 function updateVibrationIntensity() {
