@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Election Simulator</h1>
+        
+        <div class="input-section">
+            <label for="candidates">Candidate List:</label>
+            <ul id="candidateList"></ul>
+        </div>
+
+        <button id="addCandidateButton">Add Candidate</button>
+
+        <div class="input-section">
+            <label for="population">Enter Number of Registered Voters:</label>
+            <input type="number" id="population" placeholder="Registered Voters">
+        </div>
+
+        <div class="input-section">
+            <label for="partyAffiliation">Locality Affiliation:</label>
+            <select id="partyAffiliation">
+                <option value="None">None</option>
+                <option value="Republican">Republican</option>
+                <option value="Leaning Republican">Leaning Republican</option>
+                <option value="Democrat">Democrat</option>
+                <option value="Leaning Democrat">Leaning Democrat</option>
+                <option value="Independent">Independent</option>
+            </select>
+        </div>
+
+        <button id="simulateButton">Simulate Election</button>
+
+        <div class="result-section">
+            <h2>Election Results:</h2>
+            <div id="results" class="results-text"></div>
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <h2>Add Candidate</h2>
+            <div class="input-section">
+                <label for="newCandidateName">Name:</label>
+                <input type="text" id="newCandidateName" placeholder="Candidate Name">
+            </div>
+            <div class="input-section">
+                <label for="newCampaignLevel">Campaign Level (1-100):</label>
+                <input type="number" id="newCampaignLevel" placeholder="Campaign Level">
+            </div>
+            <div class="input-section">
+                <label for="newPartyAffiliation">Party (R/D/I):</label>
+                <select id="newPartyAffiliation">
+                    <option value="R">Republican</option>
+                    <option value="D">Democrat</option>
+                    <option value="I">Independent</option>
+                </select>
+            </div>
+            <div class="input-section">
+                <label for="newIsWriteIn">Write-In (y/n):</label>
+                <select id="newIsWriteIn">
+                    <option value="Y">Yes</option>
+                    <option value="N">No</option>
+                </select>
+            </div>
+            <button onclick="addCandidate()">Add Candidate</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="container">
+        <div class="explanation-section">
+            <h2>Locality Affiliation:</h2>
+            <p>
+                Locality Affiliation represents the political inclination of the population in the simulated area. It influences the campaign levels of candidates based on their party affiliations:
+            </p>
+            <ul>
+                <li><strong>Republican:</strong> Candidates affiliated with the Republican party receive a 40% campaign level boost.</li>
+                <li><strong>Leaning Republican:</strong> Candidates leaning towards the Republican party receive a 20% campaign level boost.</li>
+                <li><strong>Democrat:</strong> Candidates affiliated with the Democrat party receive a 40% campaign level boost.</li>
+                <li><strong>Leaning Democrat:</strong> Candidates leaning towards the Democrat party receive a 20% campaign level boost.</li>
+                <li><strong>Independent:</strong> Independent candidates receive no affiliation-based campaign level boost.</li>
+            </ul>
+    
+            <h2>Campaign Levels:</h2>
+            <p>
+                Campaign Level (1-100) represents the effort and popularity of each candidate. A higher campaign level increases their chances of receiving votes from the population. However, the sum of campaign levels for all candidates cannot exceed 100.
+            </p>
+    
+            <h2>Write-In:</h2>
+            <p>
+                Write-In candidates are a work in progress and not currently factored into the simulation. Their impact on the election results is yet to be determined.
+            </p>
+        </div>
+    
+        <!-- Rest of your existing HTML -->
+    </div>
+
+    
+
+    <div class="container">
+        <div class="version-info">
+            <h2>Version Info:</h2>
+            <p>Version: 1.0</p>
+            <h2>Known Bugs:</h2>
+            <ul>
+                <li>Will not add candidates after exiting edit mode.</li>
+                <!-- Add more known bugs if needed -->
+            </ul>
+        </div>
+        
+        </div>
+    
+        <!-- Rest of your existing HTML -->
+    </div>
+
+    
+</body>
+</html>
