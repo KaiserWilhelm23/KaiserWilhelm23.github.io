@@ -1,39 +1,48 @@
-<div id="app" class="column">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Kaiser Wilhelm's GitHub</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff3344, #3366ff);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-  <template v-if="gamepad">
-    <h4 class="title">
-      Vibration controller
-    </h4>
-    
-    <div class="field">
-      <label class="label">Intensity</label>
-      <div class="control">
-        <input
-          class="slider"
-          type="range"
-          min=0
-          max=100
-          v-model="magnitude">
-      </div>
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
 
-     <div class="field">
-      <label class="label">Control</label>
-      <div class="control">
-        <button
-          class="button is-primary"
-          type="button"
-          @click="toggleGo">
-          {{ button }}
-        </button>
-      </div>
-    </div>
-  </template>
-  <div v-else>
-    <h4 class="title">
-      No controller found
-    </h4>
-    <h5 class="title is-5">
-      You may need to press a button on your controller, if it's connected
-    </h5>
-  </div>
-</div>
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        a {
+            color: #ffee33;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Kaiser Wilhelm's GitHub</h1>
+    <p>Explore my projects and contributions on GitHub.</p>
+    <a href="https://github.com/kaiserwilhelm" target="_blank">Visit My GitHub</a>
+</body>
+</html>
