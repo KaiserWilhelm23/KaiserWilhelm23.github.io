@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HamTrace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <!-- HamTrace Container -->
+    <div class="ham-trace-container container">
+        <h1>HamTrace</h1>
+        <label for="callSign">Enter a ham radio call sign:</label>
+        <input type="text" id="callSign" placeholder="e.g., W4ABC">
+        <button onclick="getRegion()">Get Region and States</button>
+        <p id="result"></p>
+    </div>
+
+    <!-- User Inputs Dropdown -->
+    <div class="dropdown-container container">
+        <div class="dropdown-header" onclick="toggleUserInputs()">
+            <label for="toggleUserInputs">Submit Callsign Information:</label>
+            <div class="arrow-icon">&#9660;</div>
+        </div>
+
+        <!-- User Inputs Container -->
+        <div class="user-inputs-container" id="userInputsContainer">
+            <h2>Callsign Info Entry System</h2>
+            <label for="operatorName">Call Sign Holder Name:</label>
+            <input type="text" id="operatorName" placeholder="John Doe">
+
+            <label for="callsign">Callsign:</label>
+            <input type="text" id="callsign" placeholder="W4XYZ">
+
+            <label for="level">Level:</label>
+            <input type="text" id="level" placeholder="General License">
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" placeholder="United States">
+
+            <label for="stateProvince">State/Province:</label>
+            <input type="text" id="stateProvince" placeholder="Virginia">
+
+            <label for="localityCounty">Locality/County:</label>
+            <input type="text" id="localityCounty" placeholder="Fairfax">
+
+            <button onclick="submitEntry()">Submit Entry</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleUserInputs() {
+            var userInputsContainer = document.getElementById("userInputsContainer");
+            var arrowIcon = document.querySelector(".arrow-icon");
+
+            if (userInputsContainer.style.display === "none" || userInputsContainer.style.display === "") {
+                userInputsContainer.style.display = "block";
+                arrowIcon.innerHTML = "&#9650;"; // Change arrow to up
+            } else {
+                userInputsContainer.style.display = "none";
+                arrowIcon.innerHTML = "&#9660;"; // Change arrow to down
+            }
+        }
+    </script>
+</body>
+</html>
