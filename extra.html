@@ -1,46 +1,78 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Extra</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background-color: #FCF5E5
+    
+    }
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 15%;
+      background-color: #FCF5E5;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+    
+    li a {
+      display: block;
+      color: #000;
+      padding: 8px 16px;
+      text-decoration: none;
+      height: 23px;
+      font-size: 20px;
+    }
+    
+    li a.active {
+      background-color: #1629b2ca;
+      color: white;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #555;
+      color: white;
+    }
+    
+    .header {
+      text-align: center;
+      background: #FCF5E5;
+      color: rgb(0, 0, 0);
+      
+    }
 
+    p {
+        font-size: 18px;
+    }
+    
+    </style>
 </head>
-
 <body>
 
-    <div id="table">
-        <table border="2" style ="width:80%; background-color:rgba(241, 17, 17, 0.918); margin: auto;"">
-            <tr>
-                <td style="width:1000px; ""><a href="bhamnet.html" style="color: rgb(0, 0, 0); font-size: 23; font-weight: bolder;"> Home </a></td>
-                <td style="width:1000px;"><a href="protocol.html" style="color: rgb(0, 0, 0); font-size: 23; font-weight: bolder;"> Protocols </a></td>
-                <td style="width:1000px;"><a href="members.html" style="color: rgb(0, 0, 0); font-size: 23; font-weight: bolder;"> Members </a></td>
-                <td style="width:1000px;"><a href="repeaters.html" style="color: rgb(0, 0, 0); font-size: 23; font-weight: bolder;"> Repeaters </a></td>
-                <td style="width:1000px;"><a href="extra.html" style="color: rgb(0, 0, 0); font-size: 23; font-weight: bolder;"> Extra Stuff!! </a></td>
-                
-            </tr>
-        </table>
-    </div>   
-
-<table border = "2" style ="width:80%; background-color:rgba(219, 63, 63, 0.8); margin: auto;">
-    <tr> <td> <ul>
+<ul>
+  <center> <li><img src="logo.png" width="100"></li></center>
+  <hr class="dashed">
+  <li><a href="bhamnet.html">Home</a></li>
+  <li><a href="protocol.html">Protocols</a></li>
+  <li><a href="members.html">Members</a></li>
+  <li><a href="repeaters.html">Repeaters</a></li>
+  <li><a class="active" href="extra.html">Extra Stuff!!</a></li>
+</ul>
 
 
-<style>
-    h1{font-size: 50; margin: auto;}
-    body{background-color: rgba(13, 95, 203, 0.767);}
-    h2{font-size: 25;}
-    ul{font-size: 18;}
-    
-
-</style>
 
 
+<div style="margin-left:16%;height:1000px;">
     <center>
-        <img src="logo.png" width="115">
         <h1>Extra Stuff!</h1>
     </center>
 
 
     <center>
-        <hr class="dashed">
         <img src="ARRLogo.png" alt="ARRL Logo">
         <p>For information on the American Radio Relay League (ARRL),</p>
         <p>a nationwide ham radio organization, </p>
@@ -57,4 +89,8 @@
         <p>After you pass you must pay the FCC $35</p>
 
     </center>
+
+</div>
+
 </body>
+</html>
